@@ -11,10 +11,11 @@ RUN apt-get update && \
 
 COPY main.sh /
 RUN mkdir /www
+RUN echo PORT
 
 EXPOSE 80
 
 WORKDIR /www
 
-ENTRYPOINT ["/main.sh"]
-
+ENTRYPOINT ["/main.sh" ]
+CMD []
