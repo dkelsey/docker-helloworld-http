@@ -11,6 +11,8 @@ RUN apt-get update && \
 
 COPY main.sh /
 RUN mkdir /www
+RUN chgrp -R 0 /www && \
+    chmod -R g=u /www
 RUN echo PORT
 
 EXPOSE 80
